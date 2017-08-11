@@ -1,0 +1,9 @@
+{
+  "name": "qibanoa",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "electron-main-notification": "^1.0.1",
+    "ws": "^3.1.0"
+  }
+}
