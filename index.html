@@ -6,7 +6,7 @@
     <input type="text" name="chat-text" id="chat-text">
     <input type="button" value="发送" onclick="socket.send(document.getElementById('chat-text').value)">
     <script>
-      const socket = new WebSocket("ws://localhost:1040");
+      const socket = new WebSocket("ws://localhost:1040/browser");
       socket.onmessage = function(event) {
           var data = event.data
           document.getElementById("storage").innerHTML = data

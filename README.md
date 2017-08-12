@@ -14,8 +14,7 @@ npm install
 ### 启动server
 
 ```
-cd server
-node index
+node server/index.js
 ```
 
 ### 在浏览器中启动第一个客户端

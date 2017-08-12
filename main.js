@@ -3,7 +3,7 @@ const { app, BrowserWindow  } = require('electron')
 const WebSocket = require("ws")
 const notify = require('electron-main-notification')
 
-const ws = new WebSocket('ws://localhost:1040');
+const ws = new WebSocket('ws://localhost:1040/app');
 
 let win
 function main() {
