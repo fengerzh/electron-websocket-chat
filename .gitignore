@@ -57,3 +57,5 @@ typings/
 # dotenv environment variables file
 .env
 
+# final package
+electron-websocket-chat-darwin-x64

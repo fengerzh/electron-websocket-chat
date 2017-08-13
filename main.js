@@ -1,9 +1,21 @@
 const path = require("path")
-const { app, BrowserWindow  } = require('electron')
+const {
+  app,
+  BrowserWindow,
+  dialog,
+} = require('electron')
 const WebSocket = require("ws")
 const notify = require('electron-main-notification')
 
-const ws = new WebSocket('ws://localhost:1040/app');
+const ws = new WebSocket('ws://localhost:1040/app')
+ws.onerror = function(event) {
+  dialog.showMessageBox({
+    message: "服务端没有启动，无法接收消息",
+    buttons: [
+      "确定",
+    ]
+  })
+}
 
 let win
 function main() {
@@ -21,7 +33,7 @@ function main() {
 
     ws.on('message', function incoming(body) {
       notify(
-        '你的新的消息！',
+        '你有新的消息！',
         {body},
         () => {
           console.log('The notification got clicked on!')
